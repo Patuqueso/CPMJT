@@ -1,0 +1,35 @@
+<section class="bg-white mt-[80px] mb-10">
+    <div class="pt-8 lg:pt-16 mx-auto max-w-screen-md">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900">Contactanos</h2>
+        <p class="mb-8 lg:mb-16 font-light text-center text-gray-500  sm:text-xl">Para cualquier informacion sobre voluntarios, donaciones, instalaciones, etc, no dudes en contactarnos</p>
+        <form action="#" class="space-y-8">
+            <div>
+                <label class="block mb-2 text-sm font-medium text-gray-900 ">Asunto</label>
+                <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500" placeholder="Dinos en que te podemos ayudar" required>
+            </div>
+            <div class="sm:col-span-2">
+                <label class="block mb-2 text-sm font-medium text-gray-900 ">Mensaje</label>
+                <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500" placeholder="Deja un mensaje..."></textarea>
+            </div>
+                <button id="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-Azul sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300">Enviar Mensaje</button>
+        </form>
+    </div>
+    <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md h-[70vh]">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900">Locación</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3601.187612738728!2d-103.3996578!3d25.4987888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x868fdc8956433d27%3A0x7bfd91c94a7fbcc4!2sCentro%20de%20D%C3%ADa%20para%20Migrantes%20%22Jes%C3%BAs%20Torres%20Fraire%22!5e0!3m2!1ses-419!2sca!4v1698294514296!5m2!1ses-419!2sca" class="w-full h-full rounded-lg shadow" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+</section>
+
+<script>
+
+var submit = document.getElementById("submit");
+var subject = document.getElementById("subject") as HTMLInputElement;
+var message = document.getElementById("message") as HTMLTextAreaElement;
+
+submit.addEventListener("click", function(){
+
+    window.open("mailto:montanopatricio.pereyra@gmail.com?&subject=" + subject.value +"&body=" + message.value);
+});
+
+</script>
