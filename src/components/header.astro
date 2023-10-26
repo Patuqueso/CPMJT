@@ -2,79 +2,77 @@
 import Logo from "../components/iconos/Logo.astro";
 ---
 
-
 <header class="flex flex-col sticky z-30 top-0">
-    <section
-      class="flex flex-row w-full h-20 bg-white px-5 lg:px-14 shadow-md text-black absolute top-0 z-10"
-      id="shadow"
+  <section
+    class="flex flex-row w-full h-20 bg-white px-5 lg:px-14 shadow-md text-negro absolute top-0 z-10"
+    id="shadow"
+  >
+    <a
+      href="/"
+      class="h-full w-1/2 lg:w-1/3 py-5 flex items-center justify-start"
     >
-      <a
-        href="/"
-        class="h-full w-1/2 py-5 flex items-center justify-start"
-      >
-        <Logo />
-      </a>
-      <div class="w-1/2 h-full items-center justify-end hidden lg:flex">
-        <ul class="h-fit flex-row flex gap-10 text-Azul font-semibold">
-          <a href="/"><li>Inicio</li></a>
-          <a href="/contacto"><li>Contáctanos</li></a>
-          <a href="/Plus"><li>Servícios</li></a>
-          <a href="/Meet"><li>Trabajos recientes</li></a>
-        </ul>
-      </div>
-      </div>
-    </section>
-    <section
-      class="w-full h-fit items-center justify-center flex flex-col lg:hidden absolute z-0 -translate-y-52 ease-in-out duration-500 drop-shadow-lg"
-      id="navMenu"
+      <Logo />
+    </a>
+    <div class="w-1/3 h-full items-center justify-center hidden lg:flex">
+      <ul class="h-fit flex-row flex gap-10 text-negro">
+        <a href="/About"><li>Inicio</li></a>
+        <a href="/Plus"><li>Contactanos</li></a>
+        <a href="/Meet"><li>Servicios</li></a>
+        <a href="/Partner"><li>Trabajos recientes</li></a>
+      </ul>
+    </div>
+  </section>
+  <section
+    class="w-full h-fit items-center justify-center flex flex-col lg:hidden absolute z-0 -translate-y-52 ease-in-out duration-500 drop-shadow-lg"
+    id="navMenu"
+  >
+    <div class="w-full h-72 py-5 flex px-5 items-center justify-center bg-azul">
+      <ul class="h-fit flex-col flex gap-7 text-white text-lg text-center">
+        <a href="/About"><li>Inicio</li></a>
+        <a href="/Plus"><li>Contactanos</li></a>
+        <a href="/Meet"><li>Servicios</li></a>
+        <a href="/Partner"><li>Trabajos recientes</li></a>
+      </ul>
+    </div>
+    <div
+      class="w-36 h-7 bg-azul rounded-b-xl flex items-center justify-center"
+      id="toggle"
     >
-      <div class="w-full h-72 py-5 flex px-5 items-center justify-center bg-Azul">
-        <ul class="h-fit flex-col flex gap-7 text-white text-lg text-center">
-          <a href="/"><li>Inicio</li></a>
-          <a href="/contacto"><li>Contáctanos</li></a>
-          <a href="/Plus"><li>Servícios</li></a>
-          <a href="/Meet"><li>Trabajos recientes</li></a>
-        </ul>
-      </div>
-      <div
-        class="w-36 h-7 bg-Azul rounded-b-xl flex items-center justify-center"
-        id="toggle"
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="white"
+        class="w-6 h-6 rotate-0 duration-500 ease-in-out"
+        id = "arrow"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="white"
-          class="w-6 h-6 rotate-0 duration-500 ease-in-out"
-          id = "arrow"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
-            clip-rule="evenodd"></path>
-        </svg>
-      </div>
-    </section>
-  </header>
-  
-  <script>
-    const dropDown = document.getElementById("toggle");
-    const nav = document.getElementById("navMenu");
-    const arrow = document.getElementById("arrow");
-    var shown = false;
-  
-    dropDown.addEventListener("click", function () {
-      if (shown) {
-          nav.classList.remove("translate-y-20");
-          nav.classList.add("-translate-y-52");
-          arrow.classList.remove("rotate-180");
-          arrow.classList.add("rotate-0");
-          shown = false;
-      } else {
-          nav.classList.remove("-translate-y-52");
-          nav.classList.add("translate-y-20");
-          arrow.classList.remove("rotate-0");
-          arrow.classList.add("rotate-180");
-          shown = true;
-      }
-    });
-  </script>
+        <path
+          fill-rule="evenodd"
+          d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </div>
+  </section>
+</header>
+
+<script>
+  const dropDown = document.getElementById("toggle");
+  const nav = document.getElementById("navMenu");
+  const arrow = document.getElementById("arrow");
+  var shown = false;
+
+  dropDown.addEventListener("click", function () {
+    if (shown) {
+        nav.classList.remove("translate-y-20");
+        nav.classList.add("-translate-y-52");
+        arrow.classList.remove("rotate-180");
+        arrow.classList.add("rotate-0");
+        shown = false;
+    } else {
+        nav.classList.remove("-translate-y-52");
+        nav.classList.add("translate-y-20");
+        arrow.classList.remove("rotate-0");
+        arrow.classList.add("rotate-180");
+        shown = true;
+    }
+  });
+</script>
