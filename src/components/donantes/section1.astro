@@ -7,14 +7,14 @@ import Slider from "../slider.astro";
 
 <main>
   <div
-    class="w-full h-[70vh] px-5 md:px-14 py-5 flex flex-col md:flex-row md:gap-14 gap-3 justify-between translate-y-20"
+    class="w-full lg:h-[70vh] h-fit px-5 md:px-14 py-5 flex flex-col md:flex-row justify-evenly translate-y-20 gap-6"
   >
-    <Slider
-      imagen1={imagen1}
-      imagen2={imagen2}
-      imagen3={imagen3}
-      imagen4={imagen4}
-      imagen5={imagen5}
-    />
+    <Slider/>
+    <div class="lg:w-1/2 w-full h-full flex flex-col items-center justify-center gap-5">
+      <h1 class="text-5xl text-Azul font-bold">Empresas con compromiso social</h1>
+      <p class="text-lg">Agradecemos a todos nuestros donantes por su generosidad. Su apoyo es fundamental para nuestra causa. Juntos, hacemos la diferencia. ¡Gracias!
+        Empresas con compromiso social</p>
+    </div>
   </div>
+  
 </main>

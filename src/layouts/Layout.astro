@@ -19,7 +19,7 @@ import Header from "../components/header.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="relative">
+	<body class="relative bg-Fondo" id="body">
 		<Header/>
 		<slot />
 		<Footer/>
@@ -28,3 +28,16 @@ import Header from "../components/header.astro";
 	</body>
 </html>
 
+<script>
+	let pageUrl = window.location.href;
+	let body = document.getElementById("body");
+
+	if (pageUrl.includes("/contacto")){
+		body.classList.remove("bg-Fondo");
+		body.classList.add("bg-FondoC");
+	} else{
+		body.classList.add("bg-Fondo");
+		body.classList.remove("bg-FondoC");
+	}
+
+</script>

@@ -9,6 +9,9 @@ export default {
       colors: {
         Azul: "#033E8C",
         AzulF: "#011838",
+        Fondo: "#5A758C",
+        FondoC: "#7ca0bf",
+        Naranja: "#ffa812",
       },
     },
   },
