@@ -13,6 +13,8 @@ export default {
         FondoC: "#7ca0bf",
         FondoS: "#F08080",
         Naranja: "#ffa812",
+        Cafe: "#e4b028",
+        CafeC: "#b4764f",
       },
     },
   },
