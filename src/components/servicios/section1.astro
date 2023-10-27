@@ -1,0 +1,70 @@
+<section class="h-fit w-full translate-y-20 flex flex-col justify-center items-center">
+    <div class="w-full max-w-6xl h-fit flex flex-col items-center justify-center p-10 gap-3 border-t-2" id="comunidades">
+        <h1 class="text-Azul font-semibold text-3xl">
+            Ayuda a comunidades vulnerables
+        </h1>
+        <p class="text-lg">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo corporis temporibus asperiores voluptates qui sit? Vero nulla aliquid magnam id ipsam quod. Quae obcaecati eius sequi nulla dolorem unde nostrum.
+        </p>
+        <div class="h-[35vh] overflow-hidden  w-full flex justify-center lg:justify-between items-center">
+            <img src="../images/404.jpg" class="w-auto h-full rounded-xl" alt="">
+            <img src="../images/404.jpg" class="w-auto h-full rounded-xl lg:flex hidden" alt="">
+            <img src="../images/404.jpg" class="w-auto h-full rounded-xl lg:flex hidden" alt="">
+        </div>
+    </div>
+    <div class="w-full max-w-6xl h-fit flex flex-col items-center justify-center p-10 gap-3 border-t-2" id="educacion">
+        <h1 class="text-Azul font-semibold text-3xl">
+            Educacion y capacitacion
+        </h1>
+        <p class="text-lg">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo corporis temporibus asperiores voluptates qui sit? Vero nulla aliquid magnam id ipsam quod. Quae obcaecati eius sequi nulla dolorem unde nostrum.
+        </p>
+        <div class="h-[35vh] overflow-hidden  w-full flex justify-center lg:justify-between items-center">
+            <img src="../images/404.jpg" class="w-auto h-full rounded-xl" alt="">
+            <img src="../images/404.jpg" class="w-auto h-full rounded-xl lg:flex hidden" alt="">
+            <img src="../images/404.jpg" class="w-auto h-full rounded-xl lg:flex hidden" alt="">
+        </div>
+    </div>
+    <div class="w-full max-w-6xl h-fit flex flex-col items-center justify-center p-10 gap-3 border-t-2" id="promocion">
+        <h1 class="text-Azul font-semibold text-3xl">
+            Promocion de la cultura general
+        </h1>
+        <p class="text-lg">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo corporis temporibus asperiores voluptates qui sit? Vero nulla aliquid magnam id ipsam quod. Quae obcaecati eius sequi nulla dolorem unde nostrum.
+        </p>
+        <div class="h-[35vh] overflow-hidden  w-full flex justify-center lg:justify-between items-center">
+            <img src="../images/404.jpg" class="w-auto h-full rounded-xl" alt="">
+            <img src="../images/404.jpg" class="w-auto h-full rounded-xl lg:flex hidden" alt="">
+            <img src="../images/404.jpg" class="w-auto h-full rounded-xl lg:flex hidden" alt="">
+        </div>
+    </div>
+</section>
+
+<script>
+        let comunidades = document.getElementById("comunidades");
+        let educacion = document.getElementById("educacion");
+        let promocion = document.getElementById("promocion");
+        let pageUrl = window.location.href;
+        
+        setTimeout(() => {
+            if(pageUrl.includes("#/comunidades")){
+                comunidades.scrollIntoView({
+                    block: 'end',
+                    behavior: 'smooth',
+                    inline: 'center'
+                });
+            }else if(pageUrl.includes("#/educacion")){
+                educacion.scrollIntoView({
+                    block: 'end',
+                    behavior: 'smooth',
+                    inline: 'center'
+                });
+            }else if(pageUrl.includes("#/promocion")){
+                promocion.scrollIntoView({
+                    block: 'end',
+                    behavior: 'smooth',
+                    inline: 'center'
+                });
+            }
+        }, 500);
+</script>

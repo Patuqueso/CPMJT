@@ -1,0 +1,20 @@
+---
+const { Titulo1, HighL1, Texto1, imagen1, imagen2, imagen3, imagen4, imagen5 } =
+  Astro.props;
+
+import Slider from "../slider.astro";
+---
+
+<main>
+  <div
+    class="w-full h-[70vh] px-5 md:px-14 py-5 flex flex-col md:flex-row md:gap-14 gap-3 justify-between translate-y-20"
+  >
+    <Slider
+      imagen1={imagen1}
+      imagen2={imagen2}
+      imagen3={imagen3}
+      imagen4={imagen4}
+      imagen5={imagen5}
+    />
+  </div>
+</main>
