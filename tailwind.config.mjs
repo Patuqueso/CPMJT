@@ -11,6 +11,7 @@ export default {
         AzulF: "#011838",
         Fondo: "#5A758C",
         FondoC: "#7ca0bf",
+        FondoS: "#F08080",
         Naranja: "#ffa812",
       },
     },
